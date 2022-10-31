@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type ="text/css"/>
+    </head>
+    <body>
+        <section> 
+            <h2>Ejemplo de form</h2>
+            <h3>Informacion de registro</h3>
+            <form action="registro.jsp" method = "POST">
+                
+                <label> Nombre completo: </label>
+                <input type ="text" name="nombre" placeholder="Apellido1 Apellido2 Nombre"/> 
+                <br/>
+                <label> Correo: </label>
+                <input type ="email" name="correo" placeholder="franz@gmail.com"/> 
+                <br/>
+                <input type = "submit" name ="enviar" value="Registrar"/>
+                <label> Comida favorita: </label>
+                Coreana: <input type ="checkbox" 
+                               name="Coreana"/>
+                Española: <input type ="checkbox" 
+                               name="Española"/>
+                Italiana: <input type ="checkbox" 
+                               name="Italiana"/>
+                <br/>
+                <label> Fecha de cita: </label>
+                <input type ="date" 
+                       name="cita"/>
+                <br/>
+                <label> Hora de cita: </label>
+                <input type ="time" 
+                       name="cita"/>
+                <br/>
+                <label> Foto: </label>
+                <input type ="image" 
+                       name="foto"/>
+                <br/>
+                <label> Edad: </label>
+                <input type ="number" 
+                       name="edad" min="18" max="35"/>
+                <br/>
+                
+                <label> Color preferido: </label>
+                Azul <input type ="radio" name="color" value="Azul" />
+                Rojo <input type ="radio" name="color" value="Rojo" />
+                Verde <input type ="radio" name="color" value="Verde" />
+                <br/>
+                
+                <label> cALVE DE INGRESO: </label>
+                <input type ="password" name="clave"/>
+                <br/>
+                
+                <input type = "submit" name ="enviar" value="Registrar"/>
+            </form>
+        </section>
+    </body>
+</html>
+

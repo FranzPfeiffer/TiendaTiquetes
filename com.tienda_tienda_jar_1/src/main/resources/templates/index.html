@@ -1,0 +1,46 @@
+
+<html
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <header th:replace="layout/plantilla :: header"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header2 th:replace="layout/plantilla :: header2"/>
+        <h2>Listado de estados</h2>
+        <a th:href="@{/estado/nuevo}"> Nuevo Estado </a>
+        
+        <form th:action="@{/estado/guardar}">
+        
+        <div th:if="${estados !=null and !estados.empty}">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Capital</th>
+                        <th>Costas</th>
+                        <th>Poblacion</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="estado : ${estados}">
+                        <td>[[${estado.nombre}]]</td>
+                        <td>[[${estado.capital}]]</</td>
+                        <td>[[${estado.costas}]]</td>
+                        <td>[[${estado.poblacion}]]</td>
+                        <td><a th:href="@{/modificarEstado/}+ ${estado.idEstado}">Modificar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div th:if="${estados ==null or estados.empty}">
+            <h2>No se tienen estados que mostrar!</h2>
+        </div>
+        
+        <footer th:replace="layout/plantilla :: footer"/>
+        
+    </body>
+</html>
