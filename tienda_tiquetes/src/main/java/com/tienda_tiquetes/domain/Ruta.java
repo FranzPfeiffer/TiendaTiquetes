@@ -13,6 +13,7 @@ public class Ruta implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idRuta;
+    private String nombre_ruta;
     private String horario_1;
     private String horario_2;
     private String horario_3;
@@ -21,7 +22,8 @@ public class Ruta implements Serializable {
     public Ruta() {
     }
 
-    public Ruta(String horario_1, String horario_2, String horario_3, String horario_4) {
+    public Ruta(String nomre_ruta, String horario_1, String horario_2, String horario_3, String horario_4) {
+        this.nombre_ruta = nombre_ruta;
         this.horario_1 = horario_1;
         this.horario_2 = horario_2;
         this.horario_3 = horario_3;

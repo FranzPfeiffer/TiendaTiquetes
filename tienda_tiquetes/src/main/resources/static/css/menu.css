@@ -1,0 +1,86 @@
+
+
+* {
+    margin: 0;
+    box-sizing: border-box
+}
+
+.table { 
+  width: 100%;
+  text-align: left;
+  background: #ffffff;
+  border-collapse: collapse;
+  }
+.table td, .table th { 
+  border:2px solid #cccccc;
+  padding:15px;
+  }
+
+body {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2f/Terminal_de_buses_Santiago%2C_Estaci%C3%B3n_Central%2C_Santiago_20200204_17.jpg');
+    backdrop-filter: blur(1px);
+    background-size: 1400px 650px;
+    font-family: verdana;
+    color: #FC6E35;
+    padding: 90px 20px 0;
+}
+
+.header {
+    font-family: verdana;
+    color: #FC6E35;
+    background-color: #DEE0D3;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-family: verdana;
+    color: #FC6E35;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.nav-menu {
+    font-family: verdana;
+    color: #FC6E35;
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-family: verdana;
+    color: #FC6E35;
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 90px;
+}
+
+.nav-menu-link {
+    font-family: verdana;
+    color: #FC6E35;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.nav-menu-link:hover {
+    background-color: #d1d5be;
+    font-size: 20px;
+    transition: 1s;
+}
