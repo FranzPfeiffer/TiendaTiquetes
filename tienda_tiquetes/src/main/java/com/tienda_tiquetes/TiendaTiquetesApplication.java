@@ -1,4 +1,4 @@
-package com.tienda_tiquetes.tienda_tiquetes;
+package com.tienda_tiquetes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
