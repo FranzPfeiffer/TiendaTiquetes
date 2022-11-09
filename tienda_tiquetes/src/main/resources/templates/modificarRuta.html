@@ -1,0 +1,46 @@
+
+<html
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TRANSPORTES SAN CARLOS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Datos de Rutas</h1>
+        <a th:href"@{/}">Regresar</a>
+        </hr>
+        <form th:action="@{/ruta/guardar}"
+              method="post"
+              th:object="${ruta}">
+            
+            <input type="hidden" name="idRuta" th:field="*{idRuta}"/>
+            <br/>
+  
+            
+            <label for="nombre_ruta">Nombre</label>
+            <input type="text" name="nombre_ruta" th:field="*{nombre_ruta}"/>
+            <br/>
+
+            <label for="horario_1">horario 1</label>
+            <input type="text" name="horario_1" th:field="*{horario_1}"/>
+            <br/>
+
+            <label for="horario_2">horario 2</label>
+            <input type="text" name="horario_2" th:field="*{horario_2}"/>
+            <br/>
+
+            <label for="horario_3">horario 3</label>
+            <input type="text" name="horario_3" th:field="*{horario_3}"/>
+            <br/>
+            
+            <label for="horario_4">horario 4</label>
+            <input type="text" name="horario_4" th:field="*{horario_4}"/>
+            <br/>
+            
+            <input type="submit" name="guardar" value="Guardar"/>
+            
+        </form>
+
+    </body>
+</html>

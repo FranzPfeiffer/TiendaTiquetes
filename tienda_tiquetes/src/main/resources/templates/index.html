@@ -1,0 +1,40 @@
+
+<html
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TRANSPORTES SAN CARLOS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <h2>Rutas y horarios</h2>
+        
+        <div th:if="${rutas !=null and !rutas.empty}">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombre de ruta</th>
+                        <th>Horario 1</th>
+                        <th>Horario 2</th>
+                        <th>Horario 3</th>
+                        <th>Horario 4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="ruta : ${rutas}">
+                        <td>[[${ruta.nombre_ruta}]]</td>
+                        <td>[[${ruta.horario_1}]]</</td>
+                        <td>[[${ruta.horario_2}]]</td>
+                        <td>[[${ruta.horario_3}]]</td>
+                        <td>[[${ruta.horario_4}]]</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div th:if="${rutas ==null or rutas.empty}">
+            <h2>No se tienen rutas disponibles!</h2>
+        </div>
+    </body>
+</html>
