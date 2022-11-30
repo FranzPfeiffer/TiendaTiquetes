@@ -10,16 +10,17 @@
 
     <header class="header">            
         <nav class="nav">
-            <a href="index.html" class="nav-link logo">TRANSPORTES SAN CARLOS</a>
+            <a th:href="@{/}" class="nav-link logo">TRANSPORTES SAN CARLOS</a>
             <ul class="nav-menu">
                 <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="/">Inicio</a></li> 
-                <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="compra.html">Venta en Linea</a></li>   
-                <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="cambio.html">Cambio de Tiquetes</a></li>                    
-                <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="info.html">Quienes Somos</a></li>
-                <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="flota.html">Nuestra Flota</a></li>
-                <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="contacto.html">Contáctanos</a></li>
+                <!-- comment <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="compra.html">Venta en Linea</a></li>   -->
+                <!-- comment <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="cambio.html">Cambio de Tiquetes</a></li>  -->               
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/info/info}">Quienes Somos</a></li>
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/flota/flota}">Nuestra Flota</a></li>
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/contacto/contacto}">Contáctanos</a></li>
             </ul>  
         </nav>
+        
     </header>
 
     <body>
