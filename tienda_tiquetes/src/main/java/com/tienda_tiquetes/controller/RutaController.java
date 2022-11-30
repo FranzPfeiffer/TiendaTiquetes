@@ -23,17 +23,17 @@ public class RutaController {
     @PostMapping("/ruta/guardar")
     public String guardarRuta(Ruta ruta){
         rutaService.save(ruta);
-        return "redirect:/";
+        return "redirect:/ruta/listado";
     }
     
-    @GetMapping("/modificarRuta/{idRuta}")
+    @GetMapping("/ruta/modificar/{idRuta}")
     public String modificarRuta(Ruta ruta, Model model){
         ruta = rutaService.getRuta(ruta);
         model.addAttribute("ruta", ruta);
         return "modificarRuta";
     }
     
-    @GetMapping("/eliminarRuta/{idRuta}")
+    @GetMapping("/ruta/eliminar/{idRuta}")
     public String eliminarRuta(Ruta ruta){
         rutaService.delete(ruta);
         return "eliminarRuta";

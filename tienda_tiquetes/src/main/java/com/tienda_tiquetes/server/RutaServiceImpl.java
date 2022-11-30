@@ -44,4 +44,8 @@ public class RutaServiceImpl implements RutaService {
     public void delete(Ruta ruta){
         rutaDao.delete(ruta);
     }
+
+    public List<Ruta> getCliente() {
+        return(List<Ruta>) rutaDao.findAll();
+    }
 }

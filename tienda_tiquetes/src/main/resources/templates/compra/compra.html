@@ -22,36 +22,18 @@
         </nav>
         
     </header>
-
+    
     <body>
-
-        <h2>Rutas y horarios</h2>
-
-        <div th:if="${rutas !=null and !rutas.empty}">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Nombre de ruta</th>
-                        <th>Horario 1</th>
-                        <th>Horario 2</th>
-                        <th>Horario 3</th>
-                        <th>Horario 4</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr th:each="ruta : ${rutas}">
-                        <td>[[${ruta.nombre_ruta}]]</td>
-                        <td>[[${ruta.horario_1}]]</</td>
-                        <td>[[${ruta.horario_2}]]</td>
-                        <td>[[${ruta.horario_3}]]</td>
-                        <td>[[${ruta.horario_4}]]</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div th:if="${rutas ==null or rutas.empty}">
-            <h2>No se tienen rutas disponibles!</h2>
-        </div>
+        <input type="checkbox" id="ruta1" name="ruta1" value="RUTA1">
+        <label for="ruta1"> San Jose - La Fortuna</label><br>
+        <input type="checkbox" id="ruta2" name="ruta2" value="RUTA2">
+        <label for="ruta2"> La Fortuna - Quesada</label><br>
+        <input type="checkbox" id="ruta3" name="ruta3" value="RUTA3">
+        <label for="ruta3"> Quesada - Agua Zarcas</label><br> 
+        <input type="checkbox" id="ruta4" name="ruta3" value="RUTA4">
+        <label for="ruta4"> La Fortuna - Buena Vista</label><br> 
     </body>
+    
+     <button type="button">Continuar</button> 
+     
 </html>

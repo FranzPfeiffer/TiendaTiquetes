@@ -23,35 +23,12 @@
         
     </header>
 
+
     <body>
-
-        <h2>Rutas y horarios</h2>
-
-        <div th:if="${rutas !=null and !rutas.empty}">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Nombre de ruta</th>
-                        <th>Horario 1</th>
-                        <th>Horario 2</th>
-                        <th>Horario 3</th>
-                        <th>Horario 4</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr th:each="ruta : ${rutas}">
-                        <td>[[${ruta.nombre_ruta}]]</td>
-                        <td>[[${ruta.horario_1}]]</</td>
-                        <td>[[${ruta.horario_2}]]</td>
-                        <td>[[${ruta.horario_3}]]</td>
-                        <td>[[${ruta.horario_4}]]</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div th:if="${rutas ==null or rutas.empty}">
-            <h2>No se tienen rutas disponibles!</h2>
+        <div class="horizontal-flex-container">
+            <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://www.viajesycosasasi.com/wp-content/uploads/2012/02/bus-tracopa-costa-rica-panama.jpg" alt="Aleq" width="390" height="300" />
+            <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRR3vS_I01KvOlK0BjWlRKmzGCwkRscKp6IbUtVmcOA-EpkzIGY" alt="Aleq" width="390" height="300" />
+            <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQyOAk4wIN-BDamHHGq7IH3HbMMyWfmqZ9LeJuGuLnu0fj1GbP9" alt="Aleq" width="390" height="300" />
         </div>
     </body>
 </html>

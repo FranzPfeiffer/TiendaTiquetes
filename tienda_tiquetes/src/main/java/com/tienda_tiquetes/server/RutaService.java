@@ -1,4 +1,3 @@
-
 package com.tienda_tiquetes.server;
 
 import com.tienda_tiquetes.domain.Ruta;
@@ -12,10 +11,12 @@ public interface RutaService {
     
     //Dado un cliente.id se busca en la tabla y se retorna todo el objeto cliente
     public Ruta getRuta(Ruta ruta);
-    //Si el Ruta.id tiene un valor se busca y se actualiza
-    //Si el Ruta.id No tiene valor, se inserta el objeto en la tabla
-    public void save(Ruta cliente);
+    //Si el cliente.id tiene un valor se busca y se actualiza
+    //Si el cliente.id No tiene valor, se inserta el objeto en la tabla
+    public void save(Ruta ruta);
     
-    //Elimina el registro que tiene el id igual al Ruta.id
+    //Elimina el registro que tiene el id igual al cliente.id
     public void delete(Ruta ruta);
+    
+
 }
