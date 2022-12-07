@@ -1,14 +1,13 @@
-
+<!DOCTYPE html>
 <html
     xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>TRANSPORTES SAN CARLOS</title>
-        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/estilo.css" rel="stylesheet" type="text/css"/>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-    <header class="header">            
+    <header>            
         <nav class="nav">
             <a th:href="@{/}" class="nav-link logo">TRANSPORTES SAN CARLOS</a>
             <ul class="nav-menu">
@@ -20,20 +19,28 @@
                 <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/contacto/contacto}">Contáctanos</a></li>
             </ul>  
         </nav>
-        
+
     </header>
-    
+
     <body>
-        <input type="checkbox" id="ruta1" name="ruta1" value="RUTA1">
-        <label for="ruta1"> San Jose - La Fortuna</label><br>
-        <input type="checkbox" id="ruta2" name="ruta2" value="RUTA2">
-        <label for="ruta2"> La Fortuna - Quesada</label><br>
-        <input type="checkbox" id="ruta3" name="ruta3" value="RUTA3">
-        <label for="ruta3"> Quesada - Agua Zarcas</label><br> 
-        <input type="checkbox" id="ruta4" name="ruta3" value="RUTA4">
-        <label for="ruta4"> La Fortuna - Buena Vista</label><br> 
+        <h3>Seleccione la ruta:<br></h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="ruta1" name="ruta1" value="RUTA1"></th>
+                    <th><label for="ruta1"> San Jose - La Fortuna</label><br></th>
+                    <th><input type="checkbox" id="ruta2" name="ruta2" value="RUTA2"></th>
+                    <th><label for="ruta2"> La Fortuna - Quesada</label><br></th>
+                    <th><input type="checkbox" id="ruta3" name="ruta3" value="RUTA3"></th>
+                    <th><label for="ruta3"> Quesada - Agua Zarcas</label><br> </th>
+                    <th><input type="checkbox" id="ruta4" name="ruta3" value="RUTA4"></th>
+                    <th><label for="ruta4"> La Fortuna - Buena Vista</label><br> </th>
+                </tr>
+            </thead>
+        </table>
+
     </body>
-    
-     <button type="button">Continuar</button> 
-     
+
+    <button type="button">Continuar</button> 
+
 </html>
