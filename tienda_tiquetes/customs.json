@@ -1,0 +1,14 @@
+{
+    "elements": {},
+    "attributes": {
+        "th:if": {
+            "context": "div"
+        },
+        "th:href": {
+            "context": "a"
+        },
+        "th:each": {
+            "context": "tr"
+        }
+    }
+}

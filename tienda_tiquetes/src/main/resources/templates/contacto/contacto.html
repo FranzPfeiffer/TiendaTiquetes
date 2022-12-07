@@ -3,7 +3,7 @@
     xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>TRANSPORTES SAN CARLOS</title>
-        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/estilo.css" rel="stylesheet" type="text/css"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -20,33 +20,49 @@
                 <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/contacto/contacto}">Contáctanos</a></li>
             </ul>  
         </nav>
-        
+
     </header>
 
     <body>
 
-        <h2>Informacion de contacto</h2>
+        <h3>Informacion de contacto<br></h3>
 
-        <div class="vc_column-inner "><div class="wpb_wrapper">
-                <div class="wpb_text_column wpb_content_element ">
-                    <div class="wpb_wrapper">
-                        <h2>SAN Carlos</h2>
-                        <p><strong>Dirección de la terminal</strong><br>
-                            Terminal 3-14. San Carlos, La Fortuna de la panaderia "Las Delicias", 200m Sur. </p>
-                        <p><strong>Horario Oficina de Tiquetes</strong><br>
-                            Sábado a Lunes de 5:30 a.m. a 11:00 p.m.<br>
+        <table class="table3">
+            <thead>
+                    <tr>
+                        <th><p><strong>Dirección de la terminal</strong></th>
+                        <th><p><strong>Horario Oficina de Tiquetes</strong></th>
+                        <th><p><strong>Horario Oficina de Encomiendas</strong></th>
+                        <th><p><strong>Información y/o otras consultas</strong></th>
+                        <th><p><strong>Teléfono Encomiendas</strong></th>
+                    </tr>
+            </thead>
+            <tbody>
+                <tr style="text-align: justify; font-size: 11pt;">
+                    <td>
+                            <p>Terminal 3-14. San Carlos, La Fortuna de la panaderia "Las Delicias", 200m Sur. </p>
+                    </td>
+                    <td>
+                        
+                            <p>Sábado a Lunes de 5:30 a.m. a 11:00 p.m.<br>
                             Martes a Viernes de 6:30 a.m. a 11:00 p.m.</p>
-                        <p><strong>Horario Oficina de Encomiendas</strong><br>
-                            Lunes a Viernes de 7:00am a 12:20pm y de 1pm a 4:30pm y los&nbsp;sábados&nbsp;de 7:00am a 12:20pm y de 1pm a 3pm. <br>
+                    </td> 
+                    <td>
+                        
+                            <p>Lunes a Viernes de 7:00am a 12:20pm y de 1pm a 4:30pm y los&nbsp;sábados&nbsp;de 7:00am a 12:20pm. <br>
                             Domingos y&nbsp;feriados las oficinas de encomiendas no laboran.</p>
-                        <p><strong>Información y/o otras consultas</strong><br>
-                            (506) 2290-3030, 2643-467<br>
+                    </td>  
+                    <td>
+                        
+                            <p>(506)2290-3030, 2643-467<br>
                             Horario de Lunes a Viernes de 8am a 10pm.</p>
-                        <p><strong>Teléfono Encomiendas</strong><br>
-                            (506) 2519-9870</p>
-
-                    </div>
-                </div>
-            </div></div>
+                    </td>    
+                    <td>    
+                        
+                            <p>(506)2519-9870</p>
+                   </td>     
+                </tr>
+            </tbody>
+        </table>
     </body>
 </html>

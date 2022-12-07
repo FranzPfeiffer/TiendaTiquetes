@@ -1,24 +1,41 @@
 * {
     margin: 0;
-    box-sizing: border-box
+    box-sizing:content-box;
 }
-
-
-
 
 .table {
+    width: 70%;
+    background:rgba(255,255,255, 0.9);
+    margin: 45px;
+    text-align: center;
+}
+
+.table td, .table th {
+    padding: 10px;
+}
+
+.table2 {
     width: 80%;
     text-align: left;
-    background: #ffffff;
-    border-collapse: collapse;
-    margin: 55px;
+    background:rgba(255,255,255, 0.9);
+    border: 1px solid;
+    margin: 25px;
 }
-.table td, .table th {
-    border:2px solid #cccccc;
+
+.table2 td, .table2 th {
     padding:15px;
 }
 
+.table3 {
+    width: 90%;
+    background:rgba(255,255,255, 0.9);
+    margin: 55px;
+    border: 1px solid;
+}
 
+.table3 td, .table th {
+    padding: 18px;
+}
 
 body {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2f/Terminal_de_buses_Santiago%2C_Estaci%C3%B3n_Central%2C_Santiago_20200204_17.jpg');
@@ -26,37 +43,31 @@ body {
     font-family: verdana;
     color: #FC6E35;
     padding: 90px 20px 0;
+    margin: 25px;   
 }
 
-
-
-.header {
+header {
     font-family: verdana;
+    font-size: 14px;
     color: #FC6E35;
     background-color: #DEE0D3;
-    height: 90px;
+    height: 70px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
 }
 
-
-
 .nav {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 15px;
 }
-
-
 
 .nav-link {
     color: white;
     text-decoration: none;
 }
-
-
 
 .logo {
     font-family: verdana;
@@ -68,32 +79,22 @@ body {
     text-align: center;
 }
 
-
-
 .nav-menu {
     font-family: verdana;
     color: #FC6E35;
     display: flex;
     margin-right: 20px;
     list-style: none;
-
 }
-
-
 
 .nav-menu-item {
     font-family: verdana;
     color: #FC6E35;
     font-size: 15px;
-    margin: 15 10px;
+    margin: 10px;
     line-height: 20px;
     text-align: right;
-
-
-
 }
-
-
 
 .nav-menu-link {
     font-family: verdana;
@@ -102,21 +103,24 @@ body {
     border-radius: 4px;
 }
 
-
-
 .nav-menu-link:hover {
     background-color: #d1d5be;
     font-size: 20px;
     transition: 1s;
 }
 
-
-
 .horizontal-flex-container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     background: #FFFFFF;
+    margin: 55px;
+}
+
+.horizontal-flex-container2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
     margin: 55px;
 }
 
@@ -130,9 +134,6 @@ body {
     opacity: 1;
 }
 
-
-
 img {
-    padding: 5px;
+    padding: 10px;
 }
-

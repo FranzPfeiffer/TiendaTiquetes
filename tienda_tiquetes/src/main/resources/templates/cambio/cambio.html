@@ -3,9 +3,8 @@
     xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>TRANSPORTES SAN CARLOS</title>
-        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/estilo.css" rel="stylesheet" type="text/css"/>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <header class="header">            
@@ -22,14 +21,25 @@
         </nav>
 
     </header>
-
+      
     <body>
-        <p>Ingrese su correo electrónico para verificar si hay un tiquete válido asociado:</p>
-        <form action="/action_page.php">
-            <label for="correo">Correo Electronico:</label><br>
-            <input type="text" id="correo" name="correo" value=""><br>
-            
-            <input type="submit" value="Verificar">
-        </form> 
+        
+        <table class="table2">
+            <thead>
+                <tr>
+                    <th><h3>Ingrese su correo electrónico para verificar si hay un tiquete válido asociado:<br></h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+            <form action="/action_page.php">
+                <td><label for="correo">Correo Electronico:</label><br> </td>
+                <td><input type="text" id="correo" name="correo" value=""><br></td>
+                <td><input type="submit" value="Verificar"></td>
+            </form> 
+                </tr>
+           </tbody>
+        </table>
     </body>
+
 </html>

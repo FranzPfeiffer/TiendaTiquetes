@@ -1,14 +1,12 @@
-
+<!DOCTYPE html>
 <html
     xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>TRANSPORTES SAN CARLOS</title>
-        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/estilo.css" rel="stylesheet" type="text/css"/>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-    <header class="header">            
+    <header>            
         <nav class="nav">
             <a th:href="@{/}" class="nav-link logo">TRANSPORTES SAN CARLOS</a>
             <ul class="nav-menu">
@@ -20,38 +18,53 @@
                 <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/contacto/contacto}">Contáctanos</a></li>
             </ul>  
         </nav>
-        
+
     </header>
 
     <body>
-
-        <h2>Rutas y horarios</h2>
-
-        <div th:if="${rutas !=null and !rutas.empty}">
+        <h3>Bienvenido a la página Buses de San Carlos<br></h3>
+        <div class="horizontal-flex-container2">
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Nombre de ruta</th>
-                        <th>Horario 1</th>
-                        <th>Horario 2</th>
-                        <th>Horario 3</th>
-                        <th>Horario 4</th>
+                        <th>Rutas y horarios<br> SAN JOSE - CIUDAD QUESADA </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="ruta : ${rutas}">
-                        <td>[[${ruta.nombre_ruta}]]</td>
-                        <td>[[${ruta.horario_1}]]</</td>
-                        <td>[[${ruta.horario_2}]]</td>
-                        <td>[[${ruta.horario_3}]]</td>
-                        <td>[[${ruta.horario_4}]]</td>
-                    </tr>
+                <td><img src="../css/icono reloj.png" alt=""/></td>
+                <tr th:each="ruta : ${rutas}">
+                    <td>[[${ruta.horario_1}]]</td>
+                </tr>
                 </tbody>
             </table>
-        </div>
 
-        <div th:if="${rutas ==null or rutas.empty}">
-            <h2>No se tienen rutas disponibles!</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Rutas y horarios<br> CIUDAD QUESADA - SAN JOSE </th>
+                    </tr>
+                </thead>
+                <tbody>
+                <td><img src="../css/icono reloj.png" alt=""/></td>
+                <tr th:each="ruta : ${rutas}">
+                    <td>[[${ruta.horario_2}]]</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Rutas y horarios<br> LA FORTUNA - CIUDAD QUESADA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <td><img src="../css/icono reloj.png" alt=""/></td>
+                <tr th:each="ruta : ${rutas}">
+                    <td>[[${ruta.horario_3}]]</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </body>
 </html>
