@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TRANSPORTES SAN CARLOS</title>
+        <link href="../css/estilo.css" rel="stylesheet" type="text/css"/>
+        <meta charset="UTF-8">
+    </head>
+
+    <header>            
+        <nav class="nav">
+            <a th:href="@{/}" class="nav-link logo">TRANSPORTES SAN CARLOS</a>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="/">Inicio</a></li> 
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/compra/compra}">Venta en Linea</a></li>   
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/cambio/cambio}">Cambio de Tiquetes</a></li>              
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/info/info}">Quienes Somos</a></li>
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/flota/flota}">Nuestra Flota</a></li>
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/contacto/contacto}">Contáctanos</a></li>
+            </ul>  
+        </nav>
+
+    </header>
+    
+    <h3 style="color: white;">Selecciona un horario:<br> SAN JOSE - CIUDAD QUESADA</h3>
+    
+    <body>
+        <table class="table">
+            <thead>
+                    <th><input type="checkbox" id="horario1" name="horario1" value="horario1"></th>
+                    <th><label for="horario1"> 10:45AM</label><br></th>
+                    <th><input type="checkbox" id="horario2" name="horario2" value="horario2"></th>
+                    <th><label for="horario2"> 09:50AM</label><br></th>
+                    <th><input type="checkbox" id="horario3" name="horario3" value="horario3"></th>
+                    <th><label for="horario3"> 07:00AM</label><br> </th>
+            </thead>
+            <tbody>
+
+
+        </tbody>
+    </table>
+</body>
+<h4 style="color: white;", id= "result"></h4><br>
+<button onclick= "getCheckboxValue()">Continuar</button> <br>
+
+<script>
+    function getCheckboxValue() {
+        var hor1 = document.getElementById("horario1");
+        var hor2 = document.getElementById("horario2");
+        var hor3 = document.getElementById("horario3");
+        var result = " ";
+        if (hor1.checked == true && hor2.checked == false && hor3.checked == false) {
+            var hr1 = document.getElementById("horario1").value;
+            result = hr1;
+        } else if (hor2.checked == true && hor1.checked == false && hor3.checked == false) {
+            var hr2 = document.getElementById("horario2").value;
+            result = hr2;
+        } else if (hor3.checked == true && hor2.checked == false && hor1.checked == false) {
+            var hr3 = document.getElementById("horario3").value;
+            result = hr3;
+        } else {
+            return document.getElementById("result").innerHTML = "Seleccion invalida. Elija un horario";
+        }
+        //TiqueteService tiquete = new TiqueteService();
+        //tiquete.save(String ruta, String horario, String nombre_usuario, String correo_usuario);
+        return document.location.href = "../contacto/factura";
+        //document.getElementById("result").
+    }
+    
+    function getHorario() {
+        if (result == "horario1") {
+            return "10:45AM";
+
+        } else if (result == "horario2" ) {
+            return "09:50AM";
+
+        } else if (result == "horario3") {
+            return "07:00AM";
+        } else {
+            return null;
+        } 
+    }
+</script>
+</html>

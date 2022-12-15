@@ -8,19 +8,19 @@
         <link href="layout/estilo.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h1>Datos de Rutas</h1>
+        <h1>Datos de Tiquetes</h1>
         <a th:href"@{/}">Regresar</a>
         </hr>
-        <form th:action="@{/ruta/guardar}"
+        <form th:action="@{/tiquete/guardar}"
               method="post"
-              th:object="${ruta}">
+              th:object="${tiquete}">
             
-            <input type="hidden" name="idRuta" th:field="*{idRuta}"/>
+            <input type="hidden" name="idTiquete" th:field="*{idTiquete}"/>
             <br/>
   
             
-            <label for="nombre_ruta">Nombre</label>
-            <input type="text" name="nombre_ruta" th:field="*{nombre_ruta}"/>
+            <label for="nombre_tiquete">Nombre</label>
+            <input type="text" name="nombre_tiquete" th:field="*{nombre_tiquete}"/>
             <br/>
 
             <label for="horario_1">horario 1</label>
@@ -33,10 +33,6 @@
 
             <label for="horario_3">horario 3</label>
             <input type="text" name="horario_3" th:field="*{horario_3}"/>
-            <br/>
-            
-            <label for="horario_4">horario 4</label>
-            <input type="text" name="horario_4" th:field="*{horario_4}"/>
             <br/>
             
             <input type="submit" name="guardar" value="Guardar"/>

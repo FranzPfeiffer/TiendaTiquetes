@@ -1,0 +1,74 @@
+
+<html
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TRANSPORTES SAN CARLOS</title>
+        <link href="../css/estilo.css" rel="stylesheet" type="text/css"/>
+        <meta charset="UTF-8">
+    </head>
+
+    <header class="header">            
+        <nav class="nav">
+            <a th:href="@{/}" class="nav-link logo">TRANSPORTES SAN CARLOS</a>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="/">Inicio</a></li> 
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/compra/compra}">Venta en Linea</a></li>   
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/cambio/cambio}">Cambio de Tiquetes</a></li>              
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/info/info}">Quienes Somos</a></li>
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/flota/flota}">Nuestra Flota</a></li>
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/contacto/contacto}">Contáctanos</a></li>
+            </ul>  
+        </nav>
+
+    </header>
+      
+    <body>
+        <table class="table2">
+            <thead>
+                <tr>
+                    <th><h3>Ingrese su nombre y apellido:<br></h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td><label for="nombre">Nombre:</label><br> </td>
+                <td><input type="text" id="nombre" name="nombre" value=""><br></td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table2">
+    <thead>
+        <tr>
+            <th><h3>Ingrese su correo electrónico:<br></h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td><label for="correo">Correo Electronico:</label><br> </td>
+        <td><input type="text" id="correo" name="correo" value=""><br></td>
+    </form> 
+</tr>
+</tbody>
+</table>
+        <button onclick= "imprimirFactura()">Continuar</button> <br>
+</body>
+
+<script>
+    function getNombre() {
+        var nombre = document.getElementById("nombre");
+        return nombre;
+
+    }
+    
+    function getCorreo() {
+        var correo = document.getElementById("correo");
+        return correo;
+    }
+    
+    function imprimirFactura() {
+        return document.location.href = "../tiquete/listado";
+    }
+    
+</script>
+</html>

@@ -23,24 +23,60 @@
     </header>
 
     <body>
-        <h3>Seleccione la ruta:<br></h3>
+        <h3 style="color: white;">Seleccione la ruta:<br></h3>
         <table class="table">
             <thead>
                 <tr>
-                    <th><input type="checkbox" id="ruta1" name="ruta1" value="RUTA1"></th>
-                    <th><label for="ruta1"> San Jose - La Fortuna</label><br></th>
-                    <th><input type="checkbox" id="ruta2" name="ruta2" value="RUTA2"></th>
-                    <th><label for="ruta2"> La Fortuna - Quesada</label><br></th>
-                    <th><input type="checkbox" id="ruta3" name="ruta3" value="RUTA3"></th>
-                    <th><label for="ruta3"> Quesada - Agua Zarcas</label><br> </th>
-                    <th><input type="checkbox" id="ruta4" name="ruta3" value="RUTA4"></th>
-                    <th><label for="ruta4"> La Fortuna - Buena Vista</label><br> </th>
+                    <th><input type="checkbox" id="ruta1" name="ruta1" value="ruta1"></th>
+                    <th><label for="ruta1"> SAN JOSE - CIUDAD QUESADA</label><br></th>
+                    <th><input type="checkbox" id="ruta2" name="ruta2" value="ruta2"></th>
+                    <th><label for="ruta2"> CIUDAD QUESADA - SAN JOSE</label><br></th>
+                    <th><input type="checkbox" id="ruta3" name="ruta3" value="ruta3"></th>
+                    <th><label for="ruta3"> LA FORTUNA - CIUDAD QUESADA</label><br> </th>
+
                 </tr>
             </thead>
         </table>
 
     </body>
+    <h4 style="color: white;", id= "result"></h4><br>
+    <button onclick= "getCheckboxValue()">Continuar</button> <br>
 
-    <button type="button">Continuar</button> 
+    <script>
+        function getCheckboxValue() {
+            var rut1 = document.getElementById("ruta1");
+            var rut2 = document.getElementById("ruta2");
+            var rut3 = document.getElementById("ruta3");
+            var result = " ";
+            if (rut1.checked == true && rut2.checked == false && rut3.checked == false) {
+                var rt1 = document.getElementById("ruta1").value;
+                result = rt1;
+            } else if (rut2.checked == true && rut1.checked == false && rut3.checked == false) {
+                var rt2 = document.getElementById("ruta2").value;
+                result = rt2;
+            } else if (rut3.checked == true && rut2.checked == false && rut1.checked == false) {
+                var rt3 = document.getElementById("ruta3").value;
+                result = rt3;
+            } else {
+                return document.getElementById("result").innerHTML = "Seleccion invalida. Elija una ruta";
+            }
+            var direccion = "../compra/" + result;
+            return document.location.href = direccion;
+            //document.getElementById("result").
+        }
 
+        function getRuta() {
+            if (result == "ruta1") {
+                return "SAN JOSE - CIUDAD QUESADA";
+
+            } else if (result == "ruta2") {
+                return "CIUDAD QUESADA - SAN JOSE";
+
+            } else if (result == "ruta3") {
+                return "LA FORTUNA - CIUDAD QUESADA";
+            } else {
+                return null;
+            }
+        }
+    </script>
 </html>

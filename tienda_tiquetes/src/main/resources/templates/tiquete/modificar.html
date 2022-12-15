@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TRANSPORTES SAN CARLOS</title>
+        <link href="../css/estilo.css" rel="stylesheet" type="text/css"/>
+        <meta charset="UTF-8">
+    </head>
+
+    <header>            
+        <nav class="nav">
+            <a th:href="@{/}" class="nav-link logo">TRANSPORTES SAN CARLOS</a>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="/">Inicio</a></li> 
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/compra/compra}">Venta en Linea</a></li>   
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/cambio/cambio}">Cambio de Tiquetes</a></li>              
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/info/info}">Quienes Somos</a></li>
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/flota/flota}">Nuestra Flota</a></li>
+                <li class="nav-menu-item"><a class="nav-link nav-menu-link" th:href="@{/contacto/contacto}">Contáctanos</a></li>
+            </ul>  
+        </nav>
+
+    </header>
+    
+    <body>
+        <h1>Datos de Tiquetes</h1>
+        <a th:href"@{/}">Regresar</a>
+        </hr>
+        <form th:action="@{/tiquete/guardar}"
+              method="post"
+              th:object="${tiquete}">
+            
+            <input type="hidden" name="idTiquete" th:field="*{idTiquete}"/>
+            <br/>
+  
+            
+            <label for="nombre_tiquete">Ruta</label>
+            <input type="text" name="ruta" th:field="*{ruta}"/>
+            <br/>
+
+            <label for="horario_1">Horario</label>
+            <input type="text" name="horario" th:field="*{horario}"/>
+            <br/>
+
+            <label for="horario_2">Nombre</label>
+            <input type="text" name="nombre_usuario" th:field="*{nombre_usuario}"/>
+            <br/>
+
+            <label for="horario_3">Correo</label>
+            <input type="text" name="correo_usuario" th:field="*{correo_usuario}"/>
+            <br/>
+            
+            <input type="submit" name="guardar" value="Guardar"/>
+            
+        </form>
+
+    </body>
+
+
+</html>
+
